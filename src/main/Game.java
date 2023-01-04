@@ -2,7 +2,7 @@ package main;
 
 import java.awt.Graphics;
 
-import Entities.Player;
+import entities.Player;
 
 public class Game implements Runnable {
 

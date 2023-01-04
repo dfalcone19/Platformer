@@ -1,4 +1,4 @@
-package Entities;
+package entities;
 
 import static utils.Constants.Directions.*;
 import static utils.Constants.PlayerConstants.*;
