@@ -11,6 +11,8 @@ import inputs.KeyboardInputs;
 import inputs.MouseInput;
 import static utils.Constants.PlayerConstants.*;
 import static utils.Constants.Directions.*;
+import static main.Game.GAME_HEIGHT;
+import static main.Game.GAME_WIDTH;
 
 public class GamePanel extends JPanel {
 
@@ -27,23 +29,21 @@ public class GamePanel extends JPanel {
 		setPanelSize();
 	}
 
-
 	private void setPanelSize() {
-		Dimension size = new Dimension(1280, 800);
+		Dimension size = new Dimension(GAME_WIDTH, GAME_HEIGHT);
 		setMinimumSize(size);
 		setPreferredSize(size);
 		setMaximumSize(size);
-
 	}
 
 	public void paintComponent(Graphics g) {
 		requestFocus(true);
 		super.paintComponent(g);
-		
+
 		game.render(g);
-		
+
 	}
-	
+
 	public Game getGame() {
 		return game;
 	}
