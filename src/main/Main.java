@@ -1,12 +1,15 @@
 package main;
+
 /**
- * Main class to create and run game loop
+ * Main class to instantiate a new Game object
+ * 
  * @author daniel
  *
  */
 public class Main {
 	/**
 	 * Main method
+	 * 
 	 * @param args from command line
 	 */
 	public static void main(String[] args) {

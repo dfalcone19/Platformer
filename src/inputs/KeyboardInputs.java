@@ -5,22 +5,17 @@ import java.awt.event.KeyListener;
 import static utils.Constants.Directions.*;
 import main.GamePanel;
 
-/**
- * A class to get keyboard inputs from the user
- * @author daniel
- *
- */
-public class KeyboardInputs implements KeyListener{
+public class KeyboardInputs implements KeyListener {
 	private GamePanel panel;
-	
+
 	public KeyboardInputs(GamePanel panel) {
 		this.panel = panel;
 	}
-	
+
 	@Override
 	public void keyTyped(KeyEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -38,9 +33,12 @@ public class KeyboardInputs implements KeyListener{
 		case KeyEvent.VK_D:
 			panel.getGame().getPlayer().setRight(true);
 			break;
-			
+		case KeyEvent.VK_SPACE:
+			panel.getGame().getPlayer().setJump(true);
+			break;
+
 		}
-		
+
 	}
 
 	@Override
@@ -58,9 +56,12 @@ public class KeyboardInputs implements KeyListener{
 		case KeyEvent.VK_D:
 			panel.getGame().getPlayer().setRight(false);
 			break;
-			
+		case KeyEvent.VK_SPACE:
+			panel.getGame().getPlayer().setJump(false);
+			break;
+
 		}
-		
+
 	}
 
 }
